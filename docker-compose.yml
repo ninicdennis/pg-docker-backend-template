@@ -15,7 +15,7 @@ services:
     image: dpage/pgadmin4
     restart: always
     logging:
-      driver: none
+      driver: none #Disables the annoying CRSF Token logging.
     environment:
       - PGADMIN_DEFAULT_EMAIL
       - PGADMIN_DEFAULT_PASSWORD
@@ -38,6 +38,11 @@ services:
     environment:
       - API_PORT
       - API_HOST
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+      - POSTGRES_HOST
+      - POSTGRES_PORT
     ports: 
       - "5000:5000"
     

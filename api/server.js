@@ -1,7 +1,7 @@
 'use strict';
-require('dotenv').config('.env')
+require('dotenv').config('.env');
 const express = require('express');
-const testConnection = require('./routes/testConnection')
+const testConnection = require('./routes/testConnection');
 const app = express();
 app.use(express.json())
 

@@ -5,11 +5,17 @@
   "author": "Dennis Ninic",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon -L server.js"
+    "start": "nodemon -L server.js",
+    "migrate": "docker exec -it api npx knex migrate:latest",
+    "migrate:undo": "docker exec -it api npx knex migrate:rollback",
+    "seed": "docker exec -it api npx knex seed:run",
+    "dbFill": "docker exec -it api npx knex migrate:latest && docker exec -it api npx knex seed:run"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.16.1"
+    "express": "^4.16.1",
+    "knex": "^0.95.4",
+    "pg": "^8.6.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
