@@ -1,0 +1,17 @@
+{
+  "name": "pg-docker-backend-template",
+  "version": "1.0.0",
+  "description": "Express template on docker.",
+  "author": "Dennis Ninic",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon -L server.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.16.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
