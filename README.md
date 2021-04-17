@@ -6,6 +6,11 @@ This is a templated created with a express api and postgres + pgadmin backend wi
 
 Copy over the .env.example as .env. Right now, this is pretty blank, but can be adjusted as necessary.
 
+Install packages: 
+
+```
+npm i
+```
 Build the docker container:
 
 ```
@@ -38,4 +43,4 @@ Open [http://localhost:5000](http://localhost:5000) to hit the api.
 
 Open [http://localhost:5050](http://localhost:5050) to hit PGAdmin. The default username is admin@pgadmin.com and the password is root.
 
-Postgres is located in http://localhost:5000, the username is root, password is root, the db is postgres. 
+Postgres is located in http://localhost:5432, the username is root, password is root, the db is postgres. 
